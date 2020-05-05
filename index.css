@@ -1,0 +1,68 @@
+.container {
+  flex: content;
+  justify-content: center;
+  text-align: center;
+  border: 5px solid #808080;
+  border-radius: 4ch;
+}
+.dokidoki {
+  animation: dokidoki 1.5s infinite;
+}
+@keyframes dokidoki {
+  0% {
+    transform: scale(1.05);
+  }
+  5% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+  }
+}
+
+.images {
+  width: calc(100% - 70px);
+  height: 80%;
+  padding: 30px;
+}
+
+.content {
+  /*親div*/
+  position: relative; /*相対配置*/
+  margin: 0 auto;
+  /* animation: fadein 3s ease unset; */
+  opacity: 0;
+}
+.opacity {
+  opacity: 1;
+}
+.disp-animation {
+  animation-name: fadein;
+  animation-duration: 3s;
+  /* animation-iteration-count: initial; */
+}
+
+.content p {
+  position: absolute; /*絶対配置*/
+  color: white; /*文字は白に*/
+  top: 0;
+  left: 30px;
+  font-size: 30px;
+  padding-left: 40px;
+  padding-top: 20px;
+  /* color: "#fff" */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
